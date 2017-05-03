@@ -2,13 +2,11 @@
 
 ## Scanpy outperforms common R packages
 
-Here, we compare Scanpy with *Seurat* [(Macosko *et al.*, Cell, 2017)](http://dx.doi.org/10.1016/j.cell.2015.05.002) and *Cell Ranger*, the 10x Genomics toolkit [(Zheng *et al.*, Nat. Comm. 2017)](https://dx.doi.org/10.1038/ncomms14049). First, we show that Scanpy provides a lot of the functionality of Seurat.
-
-The second comparison focuses on benchmarking, and shows that Scanpy requires much less computational resources than Cell Ranger. In particular, it enables an interactive analysis of 68000 cells on a regular laptop.
+Here, we compare Scanpy with *Seurat* [(Macosko *et al.*, Cell, 2017)](http://dx.doi.org/10.1016/j.cell.2015.05.002) and *Cell Ranger*, the 10x Genomics toolkit [(Zheng *et al.*, Nat. Comm. 2017)](https://dx.doi.org/10.1038/ncomms14049). First, we show that Scanpy provides a lot of the functionality of Seurat. Second, we focus on benchmarking and show that Scanpy requires much less computational resources than Cell Ranger. In particular, it enables an interactive analysis of 68000 cells on a regular laptop.
 
 ### Scanpy and Seurat
 
-Here ([html](http://falexwolf.de/scanpy_usage/170503_zheng17/seurat_pbmc3k.html)/[notebook](seurat_pbmc3k.ipynb)) we reproduce many of Seurat's [guided clustering tutorial](http://satijalab.org/seurat/pbmc-tutorial.html) as compiled on March 30, 2017. The data consists in 3k PBMCs from a Healthy Donor and is freely available from 10x (section *Chromium Demonstration v1 Chemistry* in [datasets](https://support.10xgenomics.com/single-cell/datasets)).
+Here ([html](http://falexwolf.de/scanpy_usage/170503_zheng17/seurat_pbmc3k.html)/[notebook](seurat_pbmc3k.ipynb)) we reproduce much of Seurat's [guided clustering tutorial](http://satijalab.org/seurat/pbmc-tutorial.html) as compiled on March 30, 2017. The data consists in 3k PBMCs from a Healthy Donor and is freely available from 10x (section *Chromium Demonstration v1 Chemistry* in [datasets](https://support.10xgenomics.com/single-cell/datasets)).
 
 ### Scanpy and Cell Ranger
 
