@@ -2,13 +2,12 @@
 
 ## Scanpy computationally outperforms Cell Ranger
 
-We compare Scanpy with *Cell Ranger*, the 10x Genomics toolkit [(Zheng *et al.*, Nat. Comm. 2017)](https://dx.doi.org/10.1038/ncomms14049). We show that Scanpy requires much less computational resources than Cell Ranger. In particular, it enables an interactive analysis of 68000 cells on a regular laptop.
+We compare Scanpy with *Cell Ranger*, the 10x Genomics toolkit [(Zheng *et al.*, Nat. Comm. 2017)](https://dx.doi.org/10.1038/ncomms14049). The comparison shows that Scanpy requires about a factor of 10 less CPU time and less memory in crucial steps of the analysis. This enables analyzing 64000 cells *without waiting times interactively on a regular laptop (MacBook Pro 13-inch, Early 2015, one 2,7 GHz Intel Core i5 processor with two cores, 16 GB 1867 MHz DDR3).
 
-Here, we compare a Scanpy [notebook](zheng17_pbmc64k_cellranger.ipynb) with a [notebook](zheng17_pbmc64k_cellranger_R.ipynb) that reproduces the original Cell Ranger analysis. Both notebooks produce profiling information about CPU time and memory usage and yield exactly the same results.
+This Scanpy [notebook](zheng17_pbmc64k_cellranger.ipynb) is benchmarked together with a [notebook](zheng17_pbmc64k_cellranger_R.ipynb) that reproduces the original Cell Ranger analysis. Both notebooks produce profiling information about CPU time and memory usage and yield exactly the same results.
 
 The data used for this consists in 68,579 PBMC cells and is freely available [[page](https://support.10xgenomics.com/single-cell/datasets/fresh_68k_pbmc_donor_a)/[file](https://s3-us-west-2.amazonaws.com/10x.files/samples/cell/fresh_68k_pbmc_donor_a/fresh_68k_pbmc_donor_a_filtered_gene_bc_matrices.tar.gz)].
 
-The comparison shows that Scanpy requires about a factor of 10 less CPU time and less memory in crucial step of the analysis than Cell Ranger. This enables to analyze 64000 cells **without waiting times** interactively on a regular laptop (MacBook Pro 13-inch, Early 2015, one 2,7 GHz Intel Core i5 processor with two cores, 16 GB 1867 MHz DDR3). 
 
 #### Design of the comparison
 
@@ -23,7 +22,7 @@ We obtain a speed up in the preprocessing routines of about a factor 10, in tSNE
 <img src="figs/cpu_time.png" height="250">
 <img src="figs/cpu_time_ratio.png" height="250">
 
-Scanpy offers *Diffusion Maps* and the *Diffusion Pseudotime Analysis* [Haghverdi *et al.*, Nat. Meth. (2016)](http://10.1038/nmeth.3971) for generating cell trajectories that are related to continuous processes as development or dose response. 
+Scanpy offers *Diffusion Maps* and the *Diffusion Pseudotime Analysis* [Haghverdi *et al.*, Nat. Meth. (2016)](http://10.1038/nmeth.3971) for generating cell trajectories that are related to continuous processes as development or dose response.
 <img src="figs/cpu_time_dpt.png" height="250">
 
 
@@ -33,11 +32,3 @@ The memory measurement here only concerns the memory at the end of a step, it is
 
 <img src="figs/memory.png" height="250">
 <img src="figs/memory_ratio.png" height="250">
-
-
-
-
-
-
-
-
