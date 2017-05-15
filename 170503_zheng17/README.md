@@ -1,16 +1,10 @@
 *Compiled: May 3, 2017*
 
-## Scanpy outperforms common R packages
+## Scanpy computationally outperforms Cell Ranger
 
-We compare Scanpy with *Seurat* [(Macosko *et al.*, Cell, 2017)](http://dx.doi.org/10.1016/j.cell.2015.05.002) and *Cell Ranger*, the 10x Genomics toolkit [(Zheng *et al.*, Nat. Comm. 2017)](https://dx.doi.org/10.1038/ncomms14049). First, we show that Scanpy provides a lot of the functionality of Seurat. Second, we focus on benchmarking and show that Scanpy requires much less computational resources than Cell Ranger. In particular, it enables an interactive analysis of 68000 cells on a regular laptop.
+We compare Scanpy with *Cell Ranger*, the 10x Genomics toolkit [(Zheng *et al.*, Nat. Comm. 2017)](https://dx.doi.org/10.1038/ncomms14049). We show that Scanpy requires much less computational resources than Cell Ranger. In particular, it enables an interactive analysis of 68000 cells on a regular laptop.
 
-### Scanpy and Seurat
-
-[Here,](seurat_pbmc3k.ipynb) we reproduce some of Seurat's [guided clustering tutorial](http://satijalab.org/seurat/pbmc-tutorial.html) as compiled on March 30, 2017. The data consists in 3k PBMCs from a Healthy Donor and is freely available from 10x (section *Chromium Demonstration v1 Chemistry* in [datasets](https://support.10xgenomics.com/single-cell/datasets)).
-
-### Scanpy and Cell Ranger
-
-Here, we compare a Scanpy [notebook](zheng17_pbmc64k_cellranger.ipynb) with a [Cell Ranger version of the same notebook](zheng17_pbmc64k_cellranger_R.ipynb). Both notebooks produce profiling information about CPU time and memory usage.
+Here, we compare a Scanpy [notebook](zheng17_pbmc64k_cellranger.ipynb) with a [notebook](zheng17_pbmc64k_cellranger_R.ipynb) that reproduces the original Cell Ranger analysis. Both notebooks produce profiling information about CPU time and memory usage and yield exactly the same results.
 
 The data used for this consists in 68,579 PBMC cells and is freely available [[page](https://support.10xgenomics.com/single-cell/datasets/fresh_68k_pbmc_donor_a)/[file](https://s3-us-west-2.amazonaws.com/10x.files/samples/cell/fresh_68k_pbmc_donor_a/fresh_68k_pbmc_donor_a_filtered_gene_bc_matrices.tar.gz)].
 
