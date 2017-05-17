@@ -6,21 +6,21 @@
 #### Data
 
 Examples using scRNAseq data.
-* [paul15](#paul15) - [Paul *et al.*, Cell 163, 1663 (2015)](http://dx.doi.org/10.1016/j.cell.2015.11.013)   
+* [paul15](#paul15) - [Paul *et al.*, Cell 163, 1663 (2015)](http://dx.doi.org/10.1016/j.cell.2015.11.013)
 *Transcriptional Heterogeneity and Lineage Commitment in Myeloid Progenitors*
 
 Examples using scqPCR data.
-* [moignard15](#moignard15) - [Moignard *et al.*, Nature Biotechnology 33, 269 (2015)](http://dx.doi.org/10.1038/nbt.3154)   
+* [moignard15](#moignard15) - [Moignard *et al.*, Nature Biotechnology 33, 269 (2015)](http://dx.doi.org/10.1038/nbt.3154)
 *Decoding the regulatory network of early blood development from single-cell gene expression measurements*
 
 Examples using bulk data.
-* [burczynski06](#burczynski06) - [Burczynski *et al.*, J Mol Diagn 8, 51 (2006)](http://dx.doi.org/10.2353/jmoldx.2006.050079)   
+* [burczynski06](#burczynski06) - [Burczynski *et al.*, J Mol Diagn 8, 51 (2006)](http://dx.doi.org/10.2353/jmoldx.2006.050079)
 *Molecular classification of Crohn's disease and ulcerative colitis patients using transcriptional profiles in peripheral blood mononuclear cells*
 
 Examples using simulated data.
-* [krumsiek11](#krumsiek11) - [Krumsiek *et al.*, PLoS ONE 6, e22649 (2011)](http://dx.doi.org/10.1371/journal.pone.0022649)   
+* [krumsiek11](#krumsiek11) - [Krumsiek *et al.*, PLoS ONE 6, e22649 (2011)](http://dx.doi.org/10.1371/journal.pone.0022649)
 *Hierarchical Differentiation of Myeloid Progenitors Is Encoded in the Transcription Factor Network*
-* [toggleswitch](#toggleswitch)   
+* [toggleswitch](#toggleswitch)
 *Simple toggle switch model.*
 
 <!--- ----------------------------------------------------------------------- -->
@@ -118,11 +118,11 @@ working directory, e.g., by downloading and renaming
 [preprocessing_template.py](preprocessing_template.py) and changing the function
 `myexample()` to your needs. Consider using copy and paste from
 [scanpy/examples/builtin.py](https://github.com/theislab/scanpy/tree/master/scanpy/examples/builtin.py). Call your example using `scanpy
-myexample pca`. For the previous example (`moignard15`) you would define the function 
+myexample pca`. For the previous example (`moignard15`) you would define the function
 [here](https://github.com/theislab/scanpy/blob/master/scanpy/examples/builtin.py#L143-L174).
 
 When you're done trying out parameters, you can conventiently save them by generating
-a dictionary `example_parameters` in your user module, just as 
+a dictionary `example_parameters` in your user module, just as
 [here](https://github.com/theislab/scanpy/blob/master/scanpy/examples/builtin.py#L16-50).
 
 It would be great if you added your example to [examples](EXAMPLES.md) and
@@ -138,7 +138,7 @@ into [scanpy/tools](https://github.com/theislab/scanpy/tree/master/scanpy/tools)
 ./scripts/diffmap.py moignard15
 ```
 
-#### Data of [Paul *et al.* (2015)](#ref_paul15)
+#### Data of [Paul *et al.* (2015)](#ref_paul15) <a id="paul15"></a>
 
 Load the data in `preprocessing_user.py` as follows.
 ```python
@@ -199,7 +199,7 @@ def paul15pca():
     adata['Xpca'] = sc.pca(adata.X, n_comps=50)
     # adjust expression vector of root cell
     adata['xroot'] = adata['Xpca'][adata['iroot']]
-    return adata    
+    return adata
 ```
 
 Does this preprocessing change the biology?
@@ -226,7 +226,7 @@ Note that, as tSNE yields non-deterministic output, we used the file
 `write/paul15_tsne.h5` also for plotting `paul15pca` (`cp write/paul15_tsne.h5
 write/paul15pca_tsne.h5`).
 
-#### Testing experimental groups
+#### Testing experimental groups <a id="burczynski06"></a>
 
 ```python
 def burczynski06():
@@ -241,7 +241,7 @@ def burczynski06():
 
     Reference
     ---------
-    Burczynski ME, Peterson RL, Twine NC, Zuberek KA et al. 
+    Burczynski ME, Peterson RL, Twine NC, Zuberek KA et al.
     "Molecular classification of Crohn's disease and ulcerative colitis patients
     using transcriptional profiles in peripheral blood mononuclear cells"
     J Mol Diagn 8, 51 (2006). PMID:16436634.
@@ -296,7 +296,7 @@ scanpy krumsiek11 dpt -q layout=3d
 
 The left panel illustrates how the data is organized according to a *pseudotime*
 and different *segments*. Pseudotime 'estimates geodesic distance on the
-manifold' from a root cell. Segments are discrete partitions of the data. 
+manifold' from a root cell. Segments are discrete partitions of the data.
 
 <img src="http://falexwolf.de/scanpy/figs/krumsiek11_dpt_diffmap_new.png" height="175">
 
@@ -304,7 +304,7 @@ manifold' from a root cell. Segments are discrete partitions of the data.
 ## References <a id="references"></a>
 
 <a id="ref_amir13"></a>
-Amir *et al.* (2013), 
+Amir *et al.* (2013),
 *viSNE enables visualization of high dimensional single-cell data and reveals phenotypic heterogeneity of leukemia*
 [Nature Biotechnology 31, 545](http://dx.doi.org/10.1038/nbt.2594).
 
@@ -328,13 +328,13 @@ reconstructs branching cellular lineages*, [Nature Methods 13, 845](
 http://dx.doi.org/10.1038/nmeth.3971).
 
 <a id="ref_krumsiek10"></a>
-Krumsiek *et al.* (2010), 
-*Odefy - From discrete to continuous models*, 
+Krumsiek *et al.* (2010),
+*Odefy - From discrete to continuous models*,
 [BMC Bioinformatics 11, 233](http://dx.doi.org/10.1186/1471-2105-11-233).
 
 <a id="ref_krumsiek11"></a>
-Krumsiek *et al.* (2011), 
-*Hierarchical Differentiation of Myeloid Progenitors Is Encoded in the Transcription Factor Network*, 
+Krumsiek *et al.* (2011),
+*Hierarchical Differentiation of Myeloid Progenitors Is Encoded in the Transcription Factor Network*,
 [PLoS ONE 6, e22649](http://dx.doi.org/10.1371/journal.pone.0022649).
 
 <a id="ref_moignard15"></a>
@@ -357,4 +357,3 @@ Wittmann *et al.* (2009), *Transforming Boolean models to
 continuous models: methodology and application to T-cell receptor signaling*,
 [BMC Systems Biology 3, 98](
 http://dx.doi.org/10.1186/1752-0509-3-98).
-
