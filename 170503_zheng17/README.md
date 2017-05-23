@@ -1,19 +1,17 @@
-*Compiled: May 3, 2017*
+*First compiled: May 3, 2017*
 
 ## Scanpy computationally outperforms Cell Ranger
 
-We compare Scanpy with *Cell Ranger*, the 10x Genomics toolkit [(Zheng *et al.*, Nat. Comm. 2017)](https://dx.doi.org/10.1038/ncomms14049). The comparison shows that Scanpy requires about a factor of 10 less CPU time and less memory in crucial steps of the analysis. This enables analyzing 64000 cells without waiting times interactively on a regular laptop (MacBook Pro 13-inch, Early 2015, one 2,7 GHz Intel Core i5 processor with two cores, 16 GB 1867 MHz DDR3).
+We compare Scanpy with *Cell Ranger* R kit, the 10x Genomics toolkit [(Zheng *et al.*, Nat. Comm. 2017)](https://dx.doi.org/10.1038/ncomms14049). The comparison shows that Scanpy requires about a factor of 10 less CPU time and less memory in crucial steps of the analysis. This enables analyzing 64000 cells without waiting times interactively on a regular laptop (MacBook Pro 13-inch, Early 2015, one 2,7 GHz Intel Core i5 processor with two cores, 16 GB RAM). Note that since recently (May 9, 2017), 10x Genomics has released a command-line based version of Cell Ranger, which shares a few of Scanpy's features, but is not available for interactive use as an API.
 
-This Scanpy [notebook](zheng17_pbmc64k_cellranger.ipynb) is benchmarked together with a [notebook](zheng17_pbmc64k_cellranger_R.ipynb) that reproduces the original Cell Ranger analysis. Both notebooks produce profiling information about CPU time and memory usage and yield exactly the same results.
+This Scanpy [notebook](zheng17_pbmc68k_cellranger_Py.ipynb) is benchmarked together with a [notebook](zheng17_pbmc68k_cellranger_R.ipynb) that reproduces the original Cell Ranger analysis. Both notebooks produce profiling information about CPU time and memory usage and yield exactly the same results.
 
 The data used for this consists in 68,579 PBMC cells and is freely available [[page](https://support.10xgenomics.com/single-cell/datasets/fresh_68k_pbmc_donor_a)/[file](https://s3-us-west-2.amazonaws.com/10x.files/samples/cell/fresh_68k_pbmc_donor_a/fresh_68k_pbmc_donor_a_filtered_gene_bc_matrices.tar.gz)].
 
 
 #### Design of the comparison
 
-Both the analysis of 68000 cells with [Scanpy (68000)](http://falexwolf.de/scanpy_usage/170503_zheng17/zheng17_pbmc64k_cellranger_Py_68000cells.html) and Cell Ranger [Cell Ranger (68000)](http://falexwolf.de/scanpy_usage/170503_zheng17/zheng17_pbmc64k_cellranger_R_68000cells.html) has been split into meaningful steps, in particular *preprocessing*, *further preprocessing/PCA* and *tSNE*. For Scanpy, we also profile the computation of *Diffusion Maps* and *Diffusion Pseudotime analysis*.
-
-Here, we also compile the files for lower cell numbers: [Scanpy (40000)](http://falexwolf.de/scanpy_usage/170503_zheng17/zheng17_pbmc64k_cellranger_Py_40000cells.html), [Scanpy (20000)](http://falexwolf.de/scanpy_usage/170503_zheng17/zheng17_pbmc64k_cellranger_Py_20000cells.html), [Scanpy (10000)](http://falexwolf.de/scanpy_usage/170503_zheng17/zheng17_pbmc64k_cellranger_Py_10000cells.html), [Scanpy (5000)](http://falexwolf.de/scanpy_usage/170503_zheng17/zheng17_pbmc64k_cellranger_Py_5000cells.html), [Scanpy (1000)](http://falexwolf.de/scanpy_usage/170503_zheng17/zheng17_pbmc64k_cellranger_Py_1000cells.html) and [Scanpy (500)](http://falexwolf.de/scanpy_usage/170503_zheng17/zheng17_pbmc64k_cellranger_Py_500cells.html) / [Cell Ranger (40000)](http://falexwolf.de/scanpy_usage/170503_zheng17/zheng17_pbmc64k_cellranger_R_40000cells.html), [Cell Ranger (20000)](http://falexwolf.de/scanpy_usage/170503_zheng17/zheng17_pbmc64k_cellranger_R_20000cells.html), [Cell Ranger (10000)](http://falexwolf.de/scanpy_usage/170503_zheng17/zheng17_pbmc64k_cellranger_R_10000cells.html), [Cell Ranger (5000)](http://falexwolf.de/scanpy_usage/170503_zheng17/zheng17_pbmc64k_cellranger_R_5000cells.html), [Cell Ranger (1000)](http://falexwolf.de/scanpy_usage/170503_zheng17/zheng17_pbmc64k_cellranger_R_1000cells.html) and [Cell Ranger (500)](http://falexwolf.de/scanpy_usage/170503_zheng17/zheng17_pbmc64k_cellranger_R_500cells.html). All htmls can be downloaded from [html](html).
+Both the analysis of 68000 cells with [Scanpy (68000)](http://falexwolf.de/scanpy_usage/170503_zheng17/zheng17_pbmc64k_cellranger_Py_68000cells.html) and Cell Ranger [Cell Ranger (68000)](http://falexwolf.de/scanpy_usage/170503_zheng17/zheng17_pbmc64k_cellranger_R_68000cells.html) has been split into meaningful steps, in particular *preprocessing*, *further preprocessing/PCA* and *tSNE*. For Scanpy, we also profile the computation of *Diffusion Maps* and *Diffusion Pseudotime analysis*. Here, we also compile the files for lower cell numbers: [html](html).
 
 #### Speedup
 
