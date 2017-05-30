@@ -2,7 +2,7 @@
 
 Start off with one of the examples below. The following templates might be helpful: [myexample_template.ipynb](myexample_template.ipynb) and [preprocessing_template.py](preprocessing_template.py). Many examples, as compiled [here](EXAMPLES.md), can be called directly from the command-line.
 
-* 17-05-29 | [link](https://github.com/theislab/scanpy_usage/tree/master/170505_seurat) | We discuss pseudotime-based reconstruction of cell-cycle from image data and compare it with the deep learning based approach of [Eulenberg, Köhler, *et al.* (2017)](https://doi.org/10.1101/081364).
+* 17-05-29 | [link](https://github.com/theislab/scanpy_usage/tree/master/170529_images) | We discuss pseudotime-based reconstruction of cell-cycle from image data and compare it with the deep learning based approach of [Eulenberg, Köhler, *et al.* (2017)](https://doi.org/10.1101/081364).
 
 * 17-05-05 | [link](https://github.com/theislab/scanpy_usage/tree/master/170505_seurat) | We reproduce parts of the recent [Guided Clustering tutorial](http://satijalab.org/seurat/pbmc-tutorial.html) of [*Seurat*](http://satijalab.org/seurat/) [(Macosko *et al.*, Cell 2015)](https://doi.org/10.1016/j.cell.2015.05.002).
 
