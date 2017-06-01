@@ -41,4 +41,4 @@ scanpy one_m pp
 scanpy one_m tsne
 scanpy one_m diffmap
 ```
-on the command line (the first command runs the preprocessing). This directly calls the API functions the arameters of which can be changed using the `-p` and `-q` options.
+on the command line (the first command runs the preprocessing). This directly calls the API functions with the same name. See `scanpy --help` and `scanpy tsne --help` for information on how to change parameters.
