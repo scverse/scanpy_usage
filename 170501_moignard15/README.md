@@ -8,7 +8,11 @@ Nat. Meth. (2016)](http://dx.doi.org/10.1038/nmeth.3971). The data is from
 [Moignard *et al.*, Nat. Biotechn. (2015)](http://dx.doi.org/10.1038/nbt.3154).
 
 Here, we provide an analysis using the command line, you can do the same using
-Scanpy's API as demonstrated in this [notebook](moignard15.ipynb).
+Scanpy's API as demonstrated in this [notebook](moignard15.ipynb). As this is a
+builtin example, you do not need to create a runfile `runs.py` in your working
+directory; this is the [corresponding
+part](https://github.com/theislab/scanpy/blob/27d60e2ed40aae3b7ac170e76f41fa2e34ac6040/scanpy/examples/builtin.py#L109-L156)
+from the builtin runfile.
 
 Early mesoderm cells in mouse differentiate through three subsequent stages (PS,
 NP, HF) and then branch into erythorytes (4SG) and endothelial cells (4SFG).
