@@ -35,10 +35,9 @@ def one_m():
     sc.pp.pca(adata, n_comps=50, zero_center=False)
     return adata
 ```
-Simply use this in a file `runfile_whatevername.py` in your current working directory and run
+Simply use this in a file `runs.py` in your current working directory and type
 ```
-scanpy one_m pp
 scanpy one_m tsne
 scanpy one_m diffmap
 ```
-on the command line (the first command runs the preprocessing). This directly calls the API functions with the same name. See `scanpy --help` and `scanpy tsne --help` for information on how to change parameters.
+on the command line. This directly calls the API functions with the same name. See `scanpy --help` and `scanpy tsne --help` for information on how to change parameters.

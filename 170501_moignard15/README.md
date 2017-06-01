@@ -1,5 +1,5 @@
 *First compiled: May 3, 2017*   
-See the [notebook](moignard15).
+Also see the [notebook](moignard15.ipynb).
 
 ### Differentiation in early mesoderm cells
 
@@ -8,7 +8,7 @@ Nat. Meth. (2016)](http://dx.doi.org/10.1038/nmeth.3971). The data is from
 [Moignard *et al.*, Nat. Biotechn. (2015)](http://dx.doi.org/10.1038/nbt.3154).
 
 Here, we provide an analysis using the command line, you can do the same using
-Scanpy's API as demonstrated in this [notebook](moignard15).
+Scanpy's API as demonstrated in this [notebook](moignard15.ipynb).
 
 Early mesoderm cells in mouse differentiate through three subsequent stages (PS,
 NP, HF) and then branch into erythorytes (4SG) and endothelial cells (4SFG).
@@ -18,6 +18,7 @@ scanpy moignard15 tsne -q color=exp_groups
 scanpy moignard15 diffmap -q color=exp_groups
 ```
 <img src="figs/moignard15_pca_scatter.png" height="175"><img src="figs/moignard15_tsne.png" height="175"><img src="figs/moignard15_diffmap_comps12.png" height="175">
+
 <img src="figs/moignard15_pca_ranking_variance.png" height="175"><img src="figs/moignard15_pca_ranking_components.png" height="175">
 
 Coloring samples/cells by gene expression works analogously,
@@ -36,9 +37,7 @@ option, you can specify the tSNE basis, for example.
 scanpy moignard15 dpt -q color=exp_groups legendloc="upper left"
 scanpy moignard15 dpt -q color=exp_groups legendloc=none basis=tsne
 ```
-<img src="figs/moignard15_dpt_diffmap_comps12.png" height="175">
-<img src="figs/moignard15_dpt_segpt.png" height="175">
-<img src="figs/moignard15_dpt_heatmap.png" height="175">
+<img src="figs/moignard15_dpt_diffmap_comps12.png" height="175"><img src="figs/moignard15_dpt_segpt.png" height="175"><img src="figs/moignard15_dpt_heatmap.png" height="175">
 
 DPT orders cells categorically by *dpt groups*, and within each group, by
 pseudotime. Groups are ordered by average pseudotime within the group.  With
