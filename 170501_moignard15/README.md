@@ -1,4 +1,4 @@
-*First compiled: May 3, 2017*   
+*First compiled: May 1, 2017.*
 Also see the [notebook](moignard15.ipynb).
 
 ### Differentiation in early mesoderm cells
