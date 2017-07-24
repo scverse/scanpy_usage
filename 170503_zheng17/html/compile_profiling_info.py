@@ -46,7 +46,7 @@ for filename in glob('*cellranger_R*.html'):
     # type
     df['toolkit'] += ['Cell Ranger (R)' for i in range(7)]
     # general
-    df['step'] += ['init', 'load', 'preprocessing', 'prepr./pca', 'tSNE', 'diffmap', 'DPT']
+    df['step'] += ['init', 'load', 'Preprocessing', 'PCA', 'tSNE', 'diffmap', 'DPT']
     df['n cells'] += [n_cells for i in range(7)]
 
 
@@ -80,7 +80,7 @@ for filename in glob('*cellranger_Py*.html'):
     # type
     df['toolkit'] += ['Scanpy (Py)' for i in range(7)]
     # general
-    df['step'] += ['init', 'load', 'preprocessing', 'prepr./pca', 'tSNE', 'diffmap', 'DPT']
+    df['step'] += ['init', 'load', 'Preprocessing', 'PCA', 'tSNE', 'diffmap', 'DPT']
     df['n cells'] += [n_cells for i in range(7)]
 
 
@@ -88,8 +88,8 @@ df = pd.DataFrame(df)
 df_single = df.loc[df['toolkit'] != 'Cell Ranger (R)']
 df_single = df_single.loc[df['step'] != 'init']
 df_single = df_single.loc[df['step'] != 'load']
-df_single = df_single.loc[df['step'] != 'preprocessing']
-df_single = df_single.loc[df['step'] != 'prepr./pca']
+df_single = df_single.loc[df['step'] != 'Preprocessing']
+df_single = df_single.loc[df['step'] != 'PCA']
 df_single = df_single.loc[df['step'] != 'tSNE']
 
 # remove uninteresting steps
@@ -118,23 +118,24 @@ pl.legend(bbox_to_anchor=(1.04, 0.5), loc=2, borderaxespad=0.)
 g.fig.suptitle('CPU time of step')
 pl.savefig('figs/cpu_time.png', dpi=400)
 
-# compute CPU time ratio
+# compute Speedup
 df1 = pd.DataFrame()
 df1['step'] = df['step'][df['toolkit'] == 'Scanpy (Py)'].values
 df1['n cells'] = df['n cells'][df['toolkit'] == 'Scanpy (Py)'].values
-df1['CPU time ratio'] = 1 / df['CPU time (min)'][df['toolkit'] == 'Cell Ranger (R)'].values * df['CPU time (min)'][df['toolkit'] == 'Scanpy (Py)'].values
+df1['Speedup'] = df['CPU time (min)'][df['toolkit'] == 'Cell Ranger (R)'].values / df['CPU time (min)'][df['toolkit'] == 'Scanpy (Py)'].values
 df1['memory ratio'] = 1 / df['total memory (GB)'][df['toolkit'] == 'Cell Ranger (R)'].values * df['total memory (GB)'][df['toolkit'] == 'Scanpy (Py)'].values
 
 g = sns.FacetGrid(df1, col='step', sharey=False)
-g = g.map(pl.scatter, 'n cells', 'CPU time ratio', color='grey')
+g = g.map(pl.scatter, 'n cells', 'Speedup', color='grey')
 pl.subplots_adjust(top=0.82, right=0.82)
-g.fig.suptitle('CPU time ratio Scanpy vs. Cell Ranger')
-pl.savefig('figs/cpu_time_ratio.png', dpi=400)
+g.fig.suptitle('Speedup Scanpy vs. Cell Ranger (Zheng el al., 2017)')
+pl.savefig('figs/speedup.png', dpi=400)
+pl.savefig('figs/speedup.pdf')
 
 g = sns.FacetGrid(df1, col='step', sharey=False)
 g = g.map(pl.scatter, 'n cells', 'memory ratio', color='grey')
 pl.subplots_adjust(top=0.82, right=0.82)
-g.fig.suptitle('Memory ratio Scanpy vs. Cell Ranger')
+g.fig.suptitle('Memory ratio Scanpy vs. Cell Ranger (Zheng el al., 2017)')
 pl.savefig('figs/memory_ratio.png', dpi=400)
 
 # scaling DPT and diffmap
