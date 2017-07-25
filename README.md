@@ -6,7 +6,7 @@ Start off with one of the use cases below. The following template might be helpf
 
 * [17-05-22](https://github.com/theislab/scanpy_usage/tree/master/170522_visualizing_one_million_cells) | Visualizing the [publicly available](https://support.10xgenomics.com/single-cell-gene-expression/datasets/1M_neurons) 1.3 mio brain cell dataset from 10X Genomics using the command line.
 
-* [17-05-05](https://github.com/theislab/scanpy_usage/tree/master/170505_seurat) | We reproduce most of the [Guided Clustering Tutorial](http://satijalab.org/seurat/pbmc-tutorial.html) of [*Seurat*](http://satijalab.org/seurat/) [(Macosko *et al.*, Cell 2015)](https://doi.org/10.1016/j.cell.2015.05.002).
+* [17-05-05](https://github.com/theislab/scanpy_usage/tree/master/170505_seurat) | We reproduce most of the [Guided Clustering Tutorial](http://satijalab.org/seurat/pbmc-tutorial.html) of [*Seurat*](http://satijalab.org/seurat/) [(Seurat *et al.*, Nat. Biotechnol. 2015)](https://doi.org/10.1038/nbt.3192).
 
 * [17-05-03](https://github.com/theislab/scanpy_usage/tree/master/170503_zheng17) | Analyzing 68 000 cells from [(Zheng *et al.*, Nat. Comms. 2017)](https://doi.org/10.1038/ncomms14049), we find that Scanpy is about a factor 5 to 16 faster and more memory efficient than the [*Cell Ranger*](https://github.com/10XGenomics/single-cell-3prime-paper/tree/master/pbmc68k_analysis) R kit for secondary analysis.
 
