@@ -3,6 +3,7 @@ from glob import glob
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot as pl
+from natsort import natsorted
 import seaborn as sns
 from matplotlib import rcParams
 
@@ -16,7 +17,7 @@ df['memory_change'] = []
 df['CPU time (min)'] = []
 
 # match html by R output
-for filename in glob('*cellranger_R*.html'):
+for filename in natsorted(glob('zheng17*cellranger_R*.html')):
     n_cells = int(re.findall('[0-9.]+', filename)[2])
     textfile = open(filename, 'r')
     filetext = textfile.read()
@@ -64,8 +65,9 @@ def extract_memory(string):
     return float(l[0]), float(l[1].replace(' GB', ''))
 
 # match html by Scanpy output
-for filename in glob('*cellranger_Py*.html'):
+for filename in natsorted(glob('zheng17*cellranger_Py*.html')):
     n_cells = int(re.findall('[0-9.]+', filename)[2])
+    print(n_cells)
     textfile = open(filename, 'r')
     filetext = textfile.read()
     textfile.close()
@@ -131,6 +133,12 @@ pl.subplots_adjust(top=0.82, right=0.82)
 g.fig.suptitle('Speedup Scanpy vs. Cell Ranger (Zheng el al., 2017)')
 pl.savefig('figs/speedup.png', dpi=400)
 pl.savefig('figs/speedup.pdf')
+
+g = sns.FacetGrid(df1, hue='step')
+g = g.map(pl.plot, 'n cells', 'Speedup', marker='o').add_legend(title=False, handlelength=0.3, frameon=True)
+pl.subplots_adjust(top=0.82, right=0.82)
+g.fig.suptitle('Speedup Scanpy vs. Cell Ranger')
+pl.savefig('figs/speedup_single_panel.pdf')
 
 g = sns.FacetGrid(df1, col='step', sharey=False)
 g = g.map(pl.scatter, 'n cells', 'memory ratio', color='grey')
