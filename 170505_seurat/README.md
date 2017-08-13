@@ -7,4 +7,4 @@ Scanpy provides a number of Seurat's features ([Satija *et al.*, Nat. Biotechnol
 
 [Here](seurat.ipynb), we reproduce most of Seurat's [guided clustering tutorial](http://satijalab.org/seurat/pbmc3k_tutorial.html) as compiled on March 30, 2017. The tutorial starts with preprocessing and ends with the identification of cell types through marker genes in clusters.
 
-The data consists in 3k PBMCs from a Healthy Donor and is freely available from 10x (section *Chromium Demonstration v1 Chemistry* in [datasets](https://support.10xgenomics.com/single-cell/datasets)).
+The data consists in *3k PBMCs from a Healthy Donor* and is freely available from 10x ([here](https://support.10xgenomics.com/single-cell/datasets/pbmc3k), section *Chromium Demonstration (v1 Chemistry)* in [datasets](https://support.10xgenomics.com/single-cell/datasets)).
