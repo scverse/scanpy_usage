@@ -9,6 +9,7 @@ Scanpy provides a number of Seurat's features ([Satija *et al.*, Nat. Biotechnol
 |----|-----|----|
 | **preprocessing** | < 1 s | 14 s |
 | **highly variable genes** | <img src="figures/scanpy_high_var_genes.png" height=200> | <img src="figures/seurat_high_var_genes.png" height=200> |
+| **correction, regressing out** | 6 s | 129 s |
 | **PCA** | < 1 s | 45 s |
 |  | <img src="figures/scanpy_pca.png" height=200> | <img src="figures/seurat_pca.png" height=200> |
 | **clustering** | 1.3 s | 65 s |
