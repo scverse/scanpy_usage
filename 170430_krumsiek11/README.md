@@ -1,4 +1,4 @@
-*First compiled: Apr 30, 2017.*
+*First compiled: Apr 30, 2017.*   
 See the [notebook](krumsiek11.ipynb).
 
 ### Simulation of myleoid progenitors

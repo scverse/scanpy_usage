@@ -5,6 +5,10 @@ write/*
 */write/*
 .*
 
+# R
+.RData*
+.Rhistory*
+
 # Python / Byte-compiled / optimized / DLL
 __pycache__/
 *.py[cod]
