@@ -3,6 +3,6 @@ See the [notebook](SPRING_export.ipynb).
 
 ### Exporting AnnData objects to SPRING
 
-In contrast to Scanpy's builtin visualization tools, the graph drawing tool of
+In contrast to Scanpy's builtin visualization tools, the graph drawing tool SPRING of
 [Weinreb *et al.* (2017)](https://doi.org/10.1101/090332) allows an
 *interactive* exploration of the data.
