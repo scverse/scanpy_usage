@@ -63,8 +63,8 @@ genes.
 <a id="moignard15_dbscan"></a>
 ```
 scanpy moignard15 dbscan -q color=exp_groups
-scanpy moignard15 diffrank -p smp=dbscan_groups names=2,3
-scanpy moignard15 diffrank -p smp=exp_groups names names=PS,4SG
+scanpy moignard15 diffrank -p obs=dbscan_groups names=2,3
+scanpy moignard15 diffrank -p obs=exp_groups names names=PS,4SG
 ```
 <img src="http://falexwolf.de/scanpy/figs1/moignard15_dbscan_tsne_dbscan_groups-exp_groups.png" height="175"><img src="http://falexwolf.de/scanpy/figs1/moignard15_diffrank_dbscan_groups.png" height="150"><img src="http://falexwolf.de/scanpy/figs1/moignard15_diffrank_exp_groups.png" height="150">
 
