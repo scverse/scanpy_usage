@@ -9,7 +9,7 @@ If you have at least 30 GB of memory, run [*cluster.py*](cluster.py) to produce 
 
 <img src="figures/tsne.png" height=300px>
 
-For simply plotting precomputed results on your laptop, use [*plot.ipynb*](plot.ipynb), which does not require much memory.
+For simply plotting precomputed results on your laptop, use [*plot.ipynb*](https://nbviewer.jupyter.org/github/theislab/scanpy_usage/blob/master/170522_visualizing_one_million_cells/plot.ipynb), which does not require much memory.
 
-For quick tests, see [*cluster_subsampled.ipynb*](cluster_subsampled.ipynb) for a notebook that processes the subsampled dataset.
+For quick tests, see [*cluster_subsampled.ipynb*](https://nbviewer.jupyter.org/github/theislab/scanpy_usage/blob/master/170522_visualizing_one_million_cells/cluster_subsampled.ipynb) for a notebook that processes the subsampled dataset.
 
