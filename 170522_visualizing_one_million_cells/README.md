@@ -1,4 +1,5 @@
-*Updated: February 4, 2018. First compiled: May 22, 2017*
+*Updated: February 4, 2018. First compiled: May 22, 2017.*   
+Thanks to M. Lotfollahi for rerunning the computations!
 
 ## Visualizing and Clustering 1.3M neurons
 
