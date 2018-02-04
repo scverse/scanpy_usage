@@ -3,9 +3,11 @@
 170505_seurat/seurat_guided_clustering_tutorial/
 170529_images/DeepFlow/
 .scanpy/
+archive/*
 figures/*
 data/*
 write/*
+*/archive/*
 */figures/*
 */data/*
 */write/*
