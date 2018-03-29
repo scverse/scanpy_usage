@@ -1,20 +1,26 @@
+import matplotlib
+matplotlib.use('Agg')  # plotting backend compatible with screen
 import sys
 import scanpy.api as sc
 
 sc.settings.verbosity = 2  # show logging output
-sc.settings.autoshow = False  # do not show figures automatically
+sc.settings.autosave = True  # save figures, do not show them
+sc.settings.set_figure_params(dpi=300)  # set sufficiently high resolution for saving
 
-path = sys.argv[1]  # read path from command line
-n_jobs = int(sys.argv[2])  # number of jobs
+filename = sys.argv[1]  # read filename from command line
 
-
-def tsne_cluster(path, njobs):
-    adata = sc.read_10x_h5(path)
+def basic_analysis(filename):
+    adata = sc.read_10x_h5(filename)
     sc.pp.recipe_zheng17(adata)
-    sc.tl.tsne(adata, n_jobs=n_jobs)
+    sc.pp.neighbors(adata)
     sc.tl.louvain(adata)
-    sc.pl.tsne(adata, color='louvain_groups', save=True, right_margin=2)
-    adata.write('one_million.h5ad')
+    sc.tl.umap(adata)
+    sc.tl.rank_genes_groups(adata, 'louvain')
+    adata.write('./write/result.h5ad')
+    # plotting
+    sc.pl.umap(adata, color='louvain')
+    sc.pl.rank_genes_groups(adata, save='.pdf')
+
 
 if __name__ == "__main__":
-    one_milion(path, n_jobs)
+    basic_analysis(filename)

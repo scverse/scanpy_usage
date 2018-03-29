@@ -1,0 +1,16 @@
+bash-4.3$ python cluster_subsample.py 1M_neurons_filtered_gene_bc_matrices_h5.h5
+reading 1M_neurons_filtered_gene_bc_matrices_h5.h5
+    finished (0:03:57.4)
+running recipe zheng17
+    finished (0:00:50.4)
+computing neighbors
+    finished (0:03:23.4)
+running Louvain clustering
+    using the "louvain" package of Traag (2017)
+    finished (0:02:06.1)
+computing UMAP
+    finished (0:08:25.6)
+ranking genes
+    finished (0:00:34.6)
+saving figure to file ./figures/umap_subsample.png
+saving figure to file ./figures/rank_genes_groups_louvain_subsample.pdf
