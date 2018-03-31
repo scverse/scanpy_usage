@@ -5,6 +5,8 @@ See the [notebook](https://nbviewer.jupyter.org/github/theislab/scanpy_usage/blo
 
 Scanpy provides a number of Seurat's features ([Satija *et al.*, Nat. Biotechnol., 2015](https://doi.org/10.1038/nbt.3192)), but at significantly higher computationally efficiency. [Here](https://nbviewer.jupyter.org/github/theislab/scanpy_usage/blob/master/170505_seurat/seurat.ipynb), we reproduce most of Seurat's [guided clustering tutorial](http://satijalab.org/seurat/pbmc3k_tutorial.html) as compiled on March 30, 2017. The tutorial starts with preprocessing and ends with the identification of cell types through marker genes of clusters. The data consists in *3k PBMCs from a Healthy Donor* and is freely available from 10x ([here](http://cf.10xgenomics.com/samples/cell-exp/1.1.0/pbmc3k/pbmc3k_filtered_gene_bc_matrices.tar.gz) from this [webpage](https://support.10xgenomics.com/single-cell-gene-expression/datasets/1.1.0/pbmc3k)). The profiling information for Seurat has been obtained within [seurat_R.ipynb](seurat_R.ipynb).
 
+*Note:* The profiling information was obtained in June 2017 for Scanpy 0.2.1 and Seurat 1.4.0.4). In the meanwhile, both Scanpy and Seurat have become faster and the difference should not be as dramatic any more.
+
 | | Scanpy | Seurat |
 |----|-----|----|
 | **preprocessing** | < 1 s | 14 s |
