@@ -12,5 +12,5 @@ If you have at least 30 GB of memory, run [*cluster.py*](cluster.py) to produce 
 
 For simply plotting precomputed results on your laptop, use [*plot.ipynb*](https://nbviewer.jupyter.org/github/theislab/scanpy_usage/blob/master/170522_visualizing_one_million_cells/plot.ipynb), which does not require much memory.
 
-For quick tests, see [*cluster_25K.ipynb*](https://nbviewer.jupyter.org/github/theislab/scanpy_usage/blob/master/170522_visualizing_one_million_cells/cluster_subsampled.ipynb) for a notebook that processes dataset that has been subsampled to 25K by 10x.
+For quick tests, see [*cluster_25K.ipynb*](https://nbviewer.jupyter.org/github/theislab/scanpy_usage/blob/master/170522_visualizing_one_million_cells/cluster_25K.ipynb) for a notebook that processes dataset that has been subsampled to 25K by 10x.
 
