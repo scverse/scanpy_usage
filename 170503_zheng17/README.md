@@ -15,13 +15,13 @@ The [data](https://s3-us-west-2.amazonaws.com/10x.files/samples/cell/fresh_68k_p
 
 We obtain a speedup in the preprocessing routines of a factor 10 to 16, in tSNE and PCA of a factor 3 to 6.
 
-<img src="figs/speedup.png" height="250">
-<img src="figs/cpu_time.png" height="250">
+<img src="figures/speedup.png" height="250">
+<img src="figures/cpu_time.png" height="250">
 
 #### Memory
 
 The memory measurement here only concerns the memory at the end of a step, it is *not* the maximum memory during a process, where R tends to allocate even a lot more. Still, here, we observe 10 times less memory used. In practice we observe an even clearer memory efficiency of Scanpy.
 
-<img src="figs/memory_ratio.png" height="250">
-<img src="figs/memory.png" height="250">
+<img src="figures/memory_ratio.png" height="250">
+<img src="figures/memory.png" height="250">
 
