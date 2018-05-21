@@ -8,6 +8,8 @@ computing neighbors
 running Louvain clustering
     using the "louvain" package of Traag (2017)
     finished (0:53:00.6)
+computing PAGA
+    finished (0:01:33.03)
 computing UMAP
     finished (3:11:44.0)
 ranking genes
