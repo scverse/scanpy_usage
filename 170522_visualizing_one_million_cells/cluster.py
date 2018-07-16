@@ -14,10 +14,12 @@ def basic_analysis(filename):
     sc.pp.recipe_zheng17(adata)
     sc.pp.neighbors(adata)
     sc.tl.louvain(adata)
+    sc.tl.paga(adata)
     sc.tl.umap(adata)
     sc.tl.rank_genes_groups(adata, 'louvain')
     adata.write('./write/result.h5ad')
     # plotting
+    sc.pl.paga(adata)
     sc.pl.umap(adata, color='louvain')
     sc.pl.rank_genes_groups(adata, save='.pdf')
 
