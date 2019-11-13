@@ -70,8 +70,7 @@ pip3 install colorama>=0.3.9
 Checkout this repo in the instance to give access to the scripts.
 
 ```bash
-git clone https://github.com/tomwhite/scanpy_usage
-(cd scanpy_usage; git checkout -b cpu-optimization origin/cpu-optimization)
+git clone https://github.com/theislab/scanpy_usage
 cd scanpy_usage/191113_umap_parallel
 ```
 
