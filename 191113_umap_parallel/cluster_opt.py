@@ -2,7 +2,7 @@ from joblib import parallel_backend
 import matplotlib
 matplotlib.use('Agg')  # plotting backend compatible with screen
 import sys
-import scanpy.api as sc
+import scanpy as sc
 
 sc.settings.verbosity = 2  # show logging output
 sc.settings.autosave = True  # save figures, do not show them
